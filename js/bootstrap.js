@@ -3158,6 +3158,9 @@
     const data = Modal.getOrCreateInstance(target);
     data.toggle(this);
   });
+
+
+  
   enableDismissTrigger(Modal);
   /**
    * ------------------------------------------------------------------------
@@ -5008,6 +5011,8 @@
     }
 
   }
+
+  
 
   enableDismissTrigger(Toast);
   /**

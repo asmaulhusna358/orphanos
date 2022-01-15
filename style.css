@@ -64,14 +64,28 @@
       
   }
   .text-box h1{
-      font-size:130px;
+      font-size:200px;
     color: #e7ecf7;
     font:bolder;
     background-color: rgb(0, 0, 0,0.5);
     width: 50%;
     position: relative;
     left: 25%;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(./images/review1.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0 ;
+    animation: back 20s linear infinite;
     
+  }
+
+  @keyframes back{
+      100%{
+          background-position: 2000px 0;
+      }
   }
   .text-box p {
       margin: 20px 0 50px;

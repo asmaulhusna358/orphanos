@@ -9,6 +9,8 @@
      <link href="css/animate.min.css" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,200;1,300;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -46,11 +48,21 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+    #preloader {
+    background: black url(./images/ben-redblock-loading.gif) no-repeat center center;
+    height: 100vh;
+    background-size: 30%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
     </style>
+    <script src="./touch.js"></script>
 
 
 </head>
 <body>
+  <div id="preloader"></div>
     <section class="subb-header">  
         <nav>
             <a href="index.html"><img src="./images/logo.png"class="animated bounceInLeft"> </a>
@@ -84,62 +96,65 @@
                 <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
-    <h1 class="animated bounceInDown">Our Facilities</h1>
+        <div class="text-box">
+          <h1 class="animated bounceInRight" style="padding-bottom: 25rem; font-size: 90px;">Our Facilities</h1>
+              </div>
+    
         
     </section>
     <!----facilities--->
     <section class="facilities">
-        <h1 >Our Facilities</h1>
-        <div class="row">
-          <div class="col-md-3">
-              <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="./images/library.png" alt="Avatar" style="width:350px;height:350px; border-radius: 70%;">
-                    </div>
-                    <div class="flip-card-back">
-                      <h4 style="font-size: 30px;">LIBRARY</h4>
-                      <p>student can gather knowledge from Library</p>
-                      
-                    </div>
+      <a style="text-decoration: none;color:cornflowerblue;" href="facilities.html">
+      <h1 >Our Facilities</h1>
+      <div class="row">
+        <div class="col-md-3" data-aos="flip-right">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/library.png" alt="Avatar" style="width:350px;height:350px; border-radius: 70%;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h4 style="font-size: 30px;">LIBRARY</h4>
+                    <p>student can gather knowledge from Library</p>
+                    
                   </div>
                 </div>
-          </div>
-          <div class="col-md-3">
-              <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="./images/basketball.png"alt="Avatar" style="width:350px;height:350px; border-radius: 70%;">
-                    </div>
-                    <div class="flip-card-back">
-                      <h4 style="font-size: 30px;">PLAYGROUND</h4>
-                      <p>student can play together to refresh their mind</p>
-                      
-                    </div>
+              </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-left">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/basketball.png"alt="Avatar" style="width:350px;height:350px; border-radius: 70%;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h4 style="font-size: 30px;">PLAYGROUND</h4>
+                    <p>student can play together to refresh their mind</p>
+                    
                   </div>
                 </div>
-          </div>
-          <div class="col-md-3">
-              <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="./images/cafeteria.png" alt="Avatar" style="width:350px;height:350px; border-radius: 70%;">
-                    </div>
-                    <div class="flip-card-back">
-                      <h4 style="font-size: 30px;">CAFETERIA</h4>
-                      <p>student can get tasty and healthy food from the cafeteria.</p>
-                      
-                      
-                    </div>
+              </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-right">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./images/cafeteria.png" alt="Avatar" style="width:350px;height:350px; border-radius: 70%;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h4 style="font-size: 30px;">CAFETERIA</h4>
+                    <p>student can get tasty and healthy food from the cafeteria.</p>
+                    
                   </div>
                 </div>
-
-                 
-
+              </div>
+        
+     
+  
 
           </div>
           <h1 style="color: rgb(49, 65, 95); font-size: 50px;padding-top: 10%;   ">Our facilities in a blink</h1>
-          <div class="video-box" style="padding-top: .70%;">
+          <div class="video-box" style="padding-top: .70%;" data-aos="fade-right">
 
               <iframe width="760" height="515" src="https://www.youtube.com/embed/DB7aXkCAhkc?start=21" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -182,5 +197,12 @@
     }
 
 </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="./script.js"></script>
+
 </body>
 </html>

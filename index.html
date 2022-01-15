@@ -6,6 +6,7 @@
      <link rel="stylesheet" href="style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link href="css/animate.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,200;1,300;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,14 +43,28 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+#preloader {
+    background: black url(./images/ben-redblock-loading.gif) no-repeat center center;
+    height: 100vh;
+    background-size: 30%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 </style>
+<script src="./touch.js"></script>
+
+
 </head>
 <body>
+
+  <div id="preloader"></div>
     <section class="header">  
       
         <nav>
           
-            <a href="index.html"><img src="./images/logo.png"class="animated bounceInLeft"> </a>
+            <a href="index.html"><img src="./images/logo.png" data-aos="fade-right"> </a>
             <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page">Home</li>
@@ -103,10 +118,10 @@
      </div>
      
 
-    <div class="text-box">
-<h1 class="animated bounceInRight   ">ORPHANOS</h1>
-<P class="animated bounceInLeft   "> A School for orphans</P>
-<br><br><a href="about.html"class="joinus-btn" class="animated bounceInUp  ">KNOW MORE ABOUT US</a></div></br> </br>
+    <div class="text-box" class="animated bounceInRight">
+<h1 class="animated bounceInRight"  >ORPHANOS</h1>
+<P class="animated bounceInLeft" > A School for orphans</P>
+<br><br><a href="about.html"class="joinus-btn" data-aos="fade-up">KNOW MORE ABOUT US</a></div></br> </br>
  
     
         
@@ -116,7 +131,7 @@
     <!-----COURSE----->
     <section class="course">
       <a style="text-decoration: none;color:cornflowerblue;" href="course.html">
-        <h1 class="animated bounceInDown" >
+        <h1 data-aos="fade-down" >
           COURSES WE OFFER
         </h1>
       </a>
@@ -124,22 +139,26 @@
         
         <div class="row">
          <button class="btn" onclick="primary()">
-         <div class="course-col">
-         <h2 class="animated bounceInRight">PRIMARY</h2>
-         <p class="animated bounceInRight">We provide primary education from class 1 to class 5</p>
+         <div class="course-col" data-aos="fade-right"
+         data-aos-offset="300"
+         data-aos-easing="ease-in-sine">
+         <h2 >PRIMARY</h2>
+         <p >We provide primary education from class 1 to class 5</p>
          </div>
          </button>
 
         <button class="btn"  onclick="secondary()">
-        <div class="course-col">
-        <h2 class="animated bounceInLeft">SECONDARY</h2>
-        <p class="animated bounceInLeft">We provide Secondary education from class 6 to class 10</p>
+        <div class="course-col" data-aos="fade-left">
+        <h2 >SECONDARY</h2>
+        <p>We provide Secondary education from class 6 to class 10</p>
         </div>
         </button>
         <button class="btn" onclick="hisecondary()">
-        <div class="course-col">
-        <h2 class="animated bounceInRight">HIGHER SECONDARY</h2>
-        <p class="animated bounceInRight">We provide HigherSecondary education from class 11 and class 12</p>
+        <div class="course-col" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+        <h2 >HIGHER SECONDARY</h2>
+        <p>We provide HigherSecondary education from class 11 and class 12</p>
         </div>
         
         
@@ -158,22 +177,22 @@
       </a>
      <br><br>
      <div class="row">
-        <div class="campus-col">
-        <a href="dhaka.html"><img src="./images/dhaka.png" alt="Dhaka" style="width:100%;height:100%;">
+        <div class="campus-col" data-aos="fade-down-right">
+        <a href="dhaka.html"><img src="./images/dhaka.png" alt="Dhaka" style="width:100%;height:100%;" >
          <div class="layer">
             <h3>DHAKA</h3>
          </div>
         </a>
         </div>
         
-        <div class="campus-col">
+        <div class="campus-col" data-aos="fade-up">
           <a href="mymen.html"><img src="./images/mymensingh.png" alt="Dhaka" style="width:100%;height:100%;">
          <div class="layer">
             <h3>MYMENSINGH</h3>
          </div>
          </a>
         </div>
-        <div class="campus-col">
+        <div class="campus-col" data-aos="fade-up-left">
           <a href="barishal.html"><img src="./images/barishal.png" alt="Dhaka" style="width:100%;height:100%;">
          <div class="layer">
             <h3>BARISHAL</h3>
@@ -190,7 +209,7 @@
       <a style="text-decoration: none;color:cornflowerblue;" href="facilities.html">
       <h1 >Our Facilities</h1>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="flip-right">
             <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -204,7 +223,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="flip-left">
             <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -218,7 +237,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="flip-right">
             <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -241,7 +260,7 @@
         <h1 style="text-decoration: none;color:cornflowerblue;">WHAT OUR TEACHER SAY</h1>
         <br><br>
         <div class="row">
-            <div class="testimonial-col">
+            <div class="testimonial-col" data-aos="fade-right">
                 <img src="./images/user1.png">
                 <div>
                     <p>It is a great opporcunity for the students to study here without any cost who all are orphans</p>
@@ -253,7 +272,7 @@
                     <i class="fa fa-star-o"></i>
                 </div>
             </div>
-            <div class="testimonial-col">
+            <div class="testimonial-col" data-aos="fade-left">
                 <img src="./images/user2.png">
                 <div>
                     <p>every child have a right to be educated.and thats why brac take this initiative for the orphans</p>
@@ -273,7 +292,7 @@
      <!----calltoaction---->
 <section class="cta">
     <h1>Enroll for our various online course</h1>
-    <a href="contact.html" class="joinus-btn">CONTACT US</a>
+    <a href="contact.html" class="joinus-btn" data-aos="fade-up">CONTACT US</a>
 </section>
 
      <!----footer---->
@@ -314,5 +333,10 @@
     }
 
 </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="./script.js"></script>
 </body>
 </html>
